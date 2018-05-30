@@ -141,6 +141,15 @@ from the repository.
 
     If prompted to accept the GPG key, verify that the fingerprint matches
     `060A 61C5 1B55 8A7F 742B 77AA C52F EB6B 621E 9F35`, and if so, accept it.
+    
+    Note: If you are installing in RHEL7 you could get following error. 
+    ```Error: Package: docker-ce-18.03.1.ce-1.el7.centos.x86_64 (docker-ce-stable)
+           Requires: pigz
+    ```
+    To fix it, just install epel-release, see http://fedoraproject.org/wiki/EPEL#How_can_I_use_these_extra_packages.3F for more details
+    ```
+    yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+    ```
 
     > Got multiple Docker repositories?
     >
